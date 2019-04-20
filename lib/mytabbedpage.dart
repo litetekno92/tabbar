@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tabbar/models/category.dart';
+import 'package:tabbar/fetchdata.dart';
+import 'package:tabbar/fetchdatacat.dart';
+
+
 
 class MyTabbedPage extends StatefulWidget {
   const MyTabbedPage({ Key key, this.title }) : super(key: key);
@@ -77,7 +81,10 @@ class _MyTabbedPageState extends State<MyTabbedPage> with SingleTickerProviderSt
       body: TabBarView(
         controller: _tabController,
         children: categories.map((Category cat) {
-          return Center(child: Text(cat.title + ' ' + cat.id.toString()));
+          // return Center(child: Text(cat.title + ' ' + cat.id.toString()));
+          return cat.id == 1 
+          ? FetchData() 
+          : FetchDataCat(cat.id);
         }).toList(),
       ),
     );
