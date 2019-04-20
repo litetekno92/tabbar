@@ -76,8 +76,8 @@ class _MyTabbedPageState extends State<MyTabbedPage> with SingleTickerProviderSt
       ),
       body: TabBarView(
         controller: _tabController,
-        children: myTabs.map((Tab tab) {
-          return Center(child: Text(tab.text));
+        children: categories.map((Category cat) {
+          return Center(child: Text(cat.title + ' ' + cat.id.toString()));
         }).toList(),
       ),
     );
