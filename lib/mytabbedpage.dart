@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tabbar/models/category.dart';
 import 'package:tabbar/fetchdata.dart';
 import 'package:tabbar/fetchdatacat.dart';
+import 'package:tabbar/widgets/drawer.dart';
 
 
 
@@ -70,6 +71,7 @@ class _MyTabbedPageState extends State<MyTabbedPage> with SingleTickerProviderSt
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: CustomDrawer(),
       appBar: AppBar(
         title: Text(widget.title),
         bottom: TabBar(

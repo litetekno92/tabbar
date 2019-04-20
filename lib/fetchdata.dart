@@ -45,7 +45,7 @@ class _FetchDataState extends State<FetchData> {
         appBar: AppBar(
           title: Text("Wordpress api"),
         ),
-        drawer: CustomDrawer(),
+//        drawer: CustomDrawer(),
         body: isLoading
         ?Center(
             child: new CircularProgressIndicator(),

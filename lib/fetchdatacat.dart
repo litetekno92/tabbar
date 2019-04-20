@@ -49,7 +49,7 @@ _FetchDataCatState(this.category);
         appBar: AppBar(
           title: Text("Le Media"),
         ),
-        drawer: CustomDrawer(),
+ //       drawer: CustomDrawer(),
         body: isLoading
         ?Center(
             child: new CircularProgressIndicator(),
