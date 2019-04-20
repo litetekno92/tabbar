@@ -67,7 +67,9 @@ class _MyTabbedPageState extends State<MyTabbedPage> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text(widget.title),
         bottom: TabBar(
+          isScrollable: true,
           controller: _tabController,
           tabs: myTabs,
         ),
